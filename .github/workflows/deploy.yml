@@ -1,0 +1,28 @@
+name: Deploy to S3 using OIDC
+
+on:
+  push:
+    branches:
+      - main  # Deploy yapmak istediğin branch
+
+permissions:
+  id-token: write     # OIDC token izni
+  contents: read      # Repo içeriği okuma izni
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Configure AWS credentials using OIDC
+        uses: aws-actions/configure-aws-credentials@v2
+        with:
+          role-to-assume: arn:aws:iam::920373029879:role/GithubaccesstoS3
+          aws-region: us-east-1
+
+      - name: Sync files to S3
+        run: |
+          aws s3 sync ./ s3://mylittlehobbies.com --delete
