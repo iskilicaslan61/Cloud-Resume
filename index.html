@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Name - Cloud Resume</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Your Name</h1>
+      <nav>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="about">
+      <h2>About Me</h2>
+      <img
+        src="images/profile.jpg"
+        alt="Your Profile Picture"
+        style="width: 150px; border-radius: 50%"
+      />
+      <p>
+        A brief introduction about yourself and your cloud computing journey.
+      </p>
+    </section>
+
+    <section id="experience">
+      <h2>Experience</h2>
+      <!-- Add your work experience details here -->
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <!-- Add your cloud-related projects here -->
+    </section>
+
+    <section id="education">
+      <h2>Education</h2>
+      <!-- Add your education details here -->
+    </section>
+
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <p>Feel free to reach out!</p>
+      <form id="contactForm">
+        <label for="name">Name:</label><br />
+        <input type="text" id="name" name="name" /><br /><br />
+
+        <label for="email">Email:</label><br />
+        <input type="email" id="email" name="email" /><br /><br />
+
+        <label for="message">Message:</label><br />
+        <textarea id="message" name="message" rows="4" cols="50"></textarea
+        ><br /><br />
+
+        <button type="submit">Send</button>
+      </form>
+      <div id="form-result"></div>
+    </section>
+
+    <footer>
+      <p>&copy; 2025 Your Name</p>
+      <p>Visitor Count: <span id="visitor-count">0</span></p>
+    </footer>
+
+    <script src="js/scripts.js"></script>
+  </body>
+</html>
